@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maqola qo'shish</title>
+</head>
+<body>
+  <center>
+    <h1>Maqola qo'shish</h1>
+    <br>
+    <hr>
+    <br>
+    <form method="post"> {%csrf_token%}
+      <label>Sarlavha:</label>
+      <input type="text" name="s">
+      <br>
+      <label>Mavzu:</label>
+      <input type="text" name="m">
+      <br>
+      <label>Matn:</label>
+      <input type="text" name="mn">
+      <br>
+      <button type="submit">Maqola qo'shish</button>
+    </form>
+  </center>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <style>
+        .blogs{
+           display: flex;
+           flex-direction: column;
+           gap: 40px;
+        }
+
+        .blog{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid gray;
+            width: 500px;
+            padding: 10px 20px;
+            border-radius: 15px;
+            transition: 0.2s;
+        }
+
+        .blog:hover{
+            transform: scale(1.1)
+        }
+
+        .add{
+            position: fixed;
+            right: 20px;
+            top: 140px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>{{muallif.ism}}ning blogi</h1>
+        <br>
+        <hr>
+        <br>
+    </center>
+        <div class="blogs" style="margin-left: 50px">
+            {%for i in blog%}
+            <div class="blog">
+                <a href="/maqola/{{i.id}}/" style="text-decoration: none; color: black;">
+                    <p>{{i.sana}}</p>
+                    <h1>{{i.sarlavha}}</h1>
+                </a>
+            </div>
+            {%endfor%}
+        </div>
+        <button class="add"><h2><a href="/maqola_add/" style="text-decoration: none; color: black">Maqola qo'shish</a></h2></button>
+</body>
+</html>

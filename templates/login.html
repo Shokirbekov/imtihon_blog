@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loginnning</title>
+</head>
+<body>
+    <center>
+        <h1>Login Page</h1>
+        <br>
+        <hr>
+        <br>
+        <form method="post"> {%csrf_token%}
+            <label>Username:</label>
+            <input type="text" name="l">
+            <br><br>
+            <label>Password:</label>
+            <input type="password" name="p">
+            <br><br>
+            <button type="submit">Login</button>
+            <br><br>
+            <h2><a href="/register/">Click if you don't have an account</a></h2>
+        </form>
+    </center>
+</body>
+</html>
