@@ -52,7 +52,7 @@ class MaqolaAddView(View):
     def get(self, request):
         return render(request, 'maqola_add.html')
     def post(self, request):
-        if request.user.is_authenticated and Muallif.user == request.user:
+        if request.user.is_authenticated:
             Maqola.objects.create(
                 sarlavha = request.POST.get('s'),
                 mavzu = request.POST.get('m'),
